@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Eye, EyeOff, User, Mail, Lock, ArrowRight, Check, X, Heart, Star, Sparkles, Crown, Zap } from "lucide-react";
+import { Eye, EyeOff, User, Mail, Lock, ArrowRight,  X, Star, } from "lucide-react";
 import Link from "next/link";
 
 interface FormData {
@@ -33,7 +33,6 @@ export default function SignUpPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [passwordStrength, setPasswordStrength] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [errors, setErrors] = useState<FormErrors>({});
 
   const backgroundImages = [
@@ -46,12 +45,7 @@ export default function SignUpPage() {
     "/wildflower.png"
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+ 
 
   const calculatePasswordStrength = (password: string): number => {
     let strength = 0;
