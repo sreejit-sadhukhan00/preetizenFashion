@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Upload, Mail, Phone, User, FileText, Instagram, Briefcase, MapPin, Clock, Star } from 'lucide-react';
+import { X, Upload, Mail, Phone, User,Instagram, Briefcase, MapPin, Clock, Star } from 'lucide-react';
 import Link from 'next/link';
 
 interface JobPosition {
@@ -91,7 +91,7 @@ const JoinUsPage = () => {
     // Simulate API call
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log('Application submitted:', applicationData);
+    
       // Reset form and close modal
       setApplicationData({
         name: '',
@@ -126,7 +126,7 @@ const JoinUsPage = () => {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.3, duration: 1, ease: "backOut" }}
           >
-            WE'RE HIRING!
+            WE&apos;RE HIRING!
           </motion.h1>
           
           <motion.p 

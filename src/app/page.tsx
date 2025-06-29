@@ -2,10 +2,9 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronRight, Star, Play, Mail, User, ArrowRight } from "lucide-react";
+import { ChevronRight,  Play,  ArrowRight } from "lucide-react";
 import Link from "next/link";
 export default function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
@@ -25,12 +24,7 @@ export default function Home() {
     { src: "/cloth4.png", title: "Casual Wear" }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+
 
   useEffect(() => {
     const handleScroll = () => {

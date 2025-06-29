@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Eye, EyeOff, Mail, Lock, ArrowRight, X, Heart, Star, Sparkles, Crown, Zap } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Eye, EyeOff, Mail, Lock, ArrowRight, X,  Star} from "lucide-react";
 import Link from "next/link";
 
 interface LoginData {
@@ -353,7 +353,7 @@ export default function LoginPage() {
             transition={{ delay: 1.3, duration: 0.6 }}
           >
             <p className="text-gray-600">
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <Link 
                 href="/auth/sign-up" 
                 className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 font-semibold hover:underline"
