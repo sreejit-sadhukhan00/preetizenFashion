@@ -84,13 +84,37 @@ function Nav() {
             transition={{ duration: 0.3 }}
           >
             <div className="flex-1">
-              <motion.h1 
-                className="text-lg lg:text-2xl font-bold tracking-[0.2em] lg:tracking-[0.3em] text-black"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                PREETIZEN
-              </motion.h1>
+              
+                <Link href='/'>
+                <div className="text-2xl lg:text-4xl font-bold tracking-[0.2em] lg:tracking-[0.3em] text-black mt-2">
+                  {'PREETIZEN'.split('').map((letter, index) => (
+                    <motion.span
+                      key={index}
+                      initial={{ y: -100, opacity: 0, rotateX: -90 }}
+                      animate={{ y: 0, opacity: 1, rotateX: 0 }}
+                      transition={{
+                        delay: index * 0.1,
+                        duration: 0.6,
+                        ease: "easeOut",
+                        type: "spring",
+                        stiffness: 100
+                      }}
+                      whileHover={{ 
+                        y: -5, 
+                        scale: 1.1,
+                        color: "#ec4899",
+                        textShadow: "0 5px 15px rgba(236, 72, 153, 0.3)"
+                      }}
+                      className="inline-block cursor-pointer"
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                </div>
+                </Link>
+
+
+              
             </div>
 
             <div className="flex items-center space-x-3">
