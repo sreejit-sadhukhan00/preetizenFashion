@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { Eye, EyeOff, User, Mail, Lock, ArrowRight,  X, Star, } from "lucide-react";
 import Link from "next/link";
 
@@ -35,15 +35,7 @@ export default function SignUpPage() {
   const [passwordStrength, setPasswordStrength] = useState(0);
   const [errors, setErrors] = useState<FormErrors>({});
 
-  const backgroundImages = [
-    "/model1.png",
-    "/clothing1.png", 
-    "/clothing2.png",
-    "/clothing3.png",
-    "/clothing4.png",
-    "/clothing5.png",
-    "/wildflower.png"
-  ];
+
 
  
 

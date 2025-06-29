@@ -10,12 +10,7 @@ export default function Home() {
   const [isNewsletterVisible, setIsNewsletterVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
-  const heroImages = [
-    "/model1.png",
-    "/clothing1.png",
-    "/clothing2.png",
-    "/clothing3.png"
-  ];
+
 
   const collectionImages = [
     { src: "/cloth1.png", title: "T-Zen Collection" },
